@@ -24,10 +24,17 @@ body {
 
 .vertical-align {
   position: relative;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
 .splash {
     height:100vh;
+}
+
+.nav_img {
+	height: 30px;
+	width: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
