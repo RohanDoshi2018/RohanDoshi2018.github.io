@@ -5,19 +5,29 @@
    ========================================================================== */
 
 
-.rohan_portrait {
-	height: 200px;
+
+
+body {
+	padding: 0;
+	background-color: white;
+	color: grey
 }
 
+#rohan_portrait {
+	height: 140px;
+}
 
+.desaturate {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
 
+.vertical-align {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
 
-
-
-
-
-
-
-
-
-
+.splash {
+    height:100vh;
+}
