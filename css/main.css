@@ -10,7 +10,12 @@
 body {
 	padding: 0;
 	background-color: white;
-	color: grey
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header_name {
+	font-size:100px; 
+	margin-bottom:0
 }
 
 #rohan_portrait {
@@ -22,19 +27,50 @@ body {
 	filter: grayscale(100%);
 }
 
-.vertical-align {
+/* Hyperlinks */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #CCC;
+  color: inherit; }
+  a.implicit, a.blank, a.blank:hover {
+    color: inherit;
+    border-bottom: none; }
+  a:hover {
+    color: #60d9ef;
+    border-bottom: 1px solid #60d9ef;
+    text-decoration: none; }
+    a:hover.implicit {
+      color: #60d9ef !important;
+      border-bottom: none; }
+
+a.anchor-wrap {
+  color: white !important;
+  font-size: 1em;
+  margin-left: 6px;
+  padding: 0 4px 0 4px;
+  text-decoration: none !important;
+  border-bottom: none; }
+  a.anchor-wrap:hover {
+    background-color: #ccc;
+    color: white !important;
+    border-bottom: none; 
+}
+
+hr {
+  border: 1;
+  width: 80%; 
+}
+
+h1, h2, h3, h4, p {
+  font-family: 'Open Sans',sans-serif;
+  line-height: 1.2em;
+  font-weight: 100;
+  margin-top: 1em; 
+}
+/*.vertical-align {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
+}*/
 
-.splash {
-    height:100vh;
-}
 
-.nav_img {
-	height: 30px;
-	width: 30px;
-	margin-left: 5px;
-	margin-right: 5px;
-}
