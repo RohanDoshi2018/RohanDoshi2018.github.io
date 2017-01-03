@@ -11,6 +11,7 @@ body {
 	padding: 0;
 	background-color: white;
 	font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
 }
 
 .header_name {
