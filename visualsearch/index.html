@@ -18,9 +18,7 @@
 
 <div class="container">
 	<div class="title">Visual Similarity Search Demo</div>
-	<div class="img_section_wrapper">
-        <div class="loader"></div>   
-    </div>
+	<div class="img_section_wrapper"></div>
     <h3>Technical Discussion</h3>
     <p> This is a visual search demo. Click on a car, and the other cars will re-order by similarity. This is done by measuring the pair-wise euclidian distance between the feature vectors for the images. We generate these feature vectors using a pre-trained TensorFlow implementation of Google's Inception-v3 model. Although the Inception-v3 model is originally trained for a general 1000-label classification task, I postulate the second-to-last layer containing a 2048 dimension feature vector feeding into the softmax classifier can be used as a generalizable representation of an image (a.k.a. transfer learning). To learn more about the underlying convolutional neural network architecture for Inception-v3, check out <a href="https://arxiv.org/abs/1512.00567">this paper by Szegedy et al. (2015).</a> </p>
     <p>Find the code on <a href="https://github.com/RohanDoshi2018/visualsearch">Github</a>.</p>

@@ -1,37 +1,10 @@
-// USER SETTINGS *********************************************************
-// For demos and production, I'd recommended setting this to true. Using the 
-// cached image features pre-computed with TensorFlow will save about 
-// ~10 seconds during webpage initialization.  Otherwise, if experimenting
-// with the server-side logic for feature generation, set to false.
-var USE_CACHED_IMAGE_FEATURES = true;
-
 // GLOBAL VARIABLES ********************************************************
 var file_arr = ['car0.jpg', 'car1.jpg', 'car2.jpg', 'car3.jpg', 'car4.jpg', 'car5.jpg', 'car6.jpg', 'car7.jpg', 'car8.jpg', 'car9.jpg', 'car10.jpg', 'car11.jpg', 'car12.jpg', 'car13.jpg', 'car14.jpg', 'car15.jpg', 'car16.jpg', 'car17.jpg', 'car18.jpg', 'car19.jpg'];
 var num_photos = file_arr.length;
 
-// if not using the pre-computed image features, query the server to apply
-// the Inception-v3 model in TensorFlow to the images to generate image
-// features
-if (!USE_CACHED_IMAGE_FEATURES) {
-    // global variable for image_features initialized
-    var image_features = {};
+// load the initial view with random cars
+update_view(file_arr);
 
-    // query the sever for the image features right away
-    $.ajax({
-        type: 'GET',
-        url: '/get_img_features',
-        success: function(data){
-            image_features = data;
-            $('.loader').hide();
-            update_view(file_arr);
-        }
-    });
-} 
-// image_features is already pre-loaded
-else {
-    $('.loader').hide();
-    update_view(file_arr);
-}
 
 // upon the click of an image, sort the images by similarity (euclidian distance of the image vectors)
 $(document).on('click', '.thumb', function(event) {
