@@ -33,7 +33,6 @@ $(document).on('click', '.thumb', function(event) {
 
 // update the view with the new_file_array
 function update_view(new_file_array) {
-    console.log("updating view");
     // remove the previously generated images
     $(".img_section_wrapper img").remove();
 
